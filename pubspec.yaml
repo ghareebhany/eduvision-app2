@@ -25,7 +25,7 @@ dependencies:
   video_player: ^2.8.7
   chewie: ^1.7.5
   webview_flutter: ^4.7.0
-  webview_flutter_android: ^3.16.0   # ✅ أضف هذا (كان ضمنياً، نحتاجه صريحاً)
+  webview_flutter_android: ^4.10.1   # ✅ رُقِّي لتوافق youtube_player_iframe ^5.2.2
   youtube_player_iframe: ^5.2.2
 
   # ── Navigation ────────────────────────────────────────────────────────────
