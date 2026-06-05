@@ -1,0 +1,22 @@
+// Project-level build.gradle
+// With the new declarative approach, plugin management is in settings.gradle.
+// This file only handles shared repo config and clean task.
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.buildDir = '../build'
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(':app')
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
